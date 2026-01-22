@@ -1,0 +1,322 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  TEMPLATE: Exclusão de Dados (LGPD) para Provedores de Internet              ║
+║  ISP AI Starter - OK Inteligência Artificial                                 ║
+║  Versão: 1.0 | Janeiro 2026                                                  ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  COMO USAR:                                                                  ║
+║  1) Substitua TODOS os placeholders abaixo pelos dados da sua empresa        ║
+║  2) Use Ctrl+H (Localizar e Substituir) para facilitar                       ║
+║  3) No WordPress, crie uma página chamada "Exclusão de Dados"                ║
+║  4) Adicione um bloco "HTML Personalizado" (Custom HTML)                     ║
+║  5) Cole TODO este código                                                    ║
+║  6) Configure URL como /exclusao-de-dados                                    ║
+║  7) Publique a página                                                        ║
+║                                                                              ║
+║  IMPORTANTE: O formulário usa FormSubmit para envio de e-mails.              ║
+║  Substitua [SEU_EMAIL_SUPORTE] no action do formulário.                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  PLACEHOLDERS PARA SUBSTITUIR:                                               ║
+║  [NOME_DA_EMPRESA]     → Razão social ou nome fantasia                       ║
+║  [SEUDOMINIO.COM.BR]   → Domínio principal do site                           ║
+║  [SEU_EMAIL_SUPORTE]   → E-mail de contato/suporte                           ║
+║  [SEU_TELEFONE]        → Telefone com DDD (ex: (31) 98765-4321)              ║
+║  [SEU_WHATSAPP_LINK]   → Link wa.me (ex: https://wa.me/5531987654321)        ║
+║  [SUA_CIDADE_UF]       → Cidade e estado (ex: Belo Horizonte, MG)            ║
+║  [SEU_CNPJ]            → CNPJ formatado (ex: 12.345.678/0001-90)             ║
+║  [SEU_INSTAGRAM]       → URL do Instagram                                    ║
+║  [SEU_LINKEDIN]        → URL do LinkedIn                                     ║
+║  [SEU_YOUTUBE]         → URL do YouTube                                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+  .ok-legal {
+    --ok-primary: #1db954;
+    --ok-primary-dark: #0e9d3d;
+    --ok-ink: #1a1a2e;
+    --ok-ink-2: #333;
+    --ok-ink-3: #666;
+    --ok-surface: #ffffff;
+    --ok-surface-2: #f8f9fa;
+    --ok-border: #eee;
+    --ok-warning: #f59e0b;
+    --ok-max-width: 720px;
+    --ok-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  .ok-legal { font-family: var(--ok-font); background: var(--ok-surface); color: var(--ok-ink-2); line-height: 1.8; font-size: 16px; padding: 40px 20px 60px; max-width: var(--ok-max-width); margin: 0 auto; -webkit-font-smoothing: antialiased; }
+  .ok-legal * { box-sizing: border-box; }
+  .ok-legal h1 { font-size: 1.85rem; font-weight: 700; color: var(--ok-primary); margin: 0 0 8px; letter-spacing: -0.02em; line-height: 1.2; }
+  .ok-legal .ok-subtitle { color: var(--ok-ink-3); font-size: 1.1rem; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--ok-border); }
+  .ok-legal h2 { font-size: 1.15rem; font-weight: 700; color: var(--ok-ink); margin: 36px 0 14px; letter-spacing: -0.01em; }
+  .ok-legal p { margin: 0 0 16px; color: var(--ok-ink-2); }
+  .ok-legal strong { color: var(--ok-ink); font-weight: 600; }
+  .ok-legal a { color: var(--ok-primary); text-decoration: none; transition: color 0.2s ease; }
+  .ok-legal a:hover { color: var(--ok-primary-dark); text-decoration: underline; }
+  .ok-legal ul { margin: 0 0 16px 24px; color: var(--ok-ink-2); padding: 0; }
+  .ok-legal li { margin-bottom: 8px; line-height: 1.7; }
+  .ok-legal li::marker { color: var(--ok-primary); }
+  .ok-legal .ok-highlight { background: var(--ok-surface-2); padding: 16px 18px; margin: 20px 0; border-left: 3px solid var(--ok-primary); border-radius: 0 8px 8px 0; }
+  .ok-legal .ok-highlight p { margin: 0; }
+  .ok-legal .ok-highlight.warning { background: #fffbeb; border-left-color: var(--ok-warning); }
+  
+  /* Benefícios */
+  .ok-legal .ok-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+  .ok-legal .ok-benefit { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: var(--ok-surface-2); border-radius: 10px; }
+  .ok-legal .ok-benefit-icon { font-size: 1.3rem; flex-shrink: 0; }
+  .ok-legal .ok-benefit-text { font-size: 0.95rem; }
+  
+  /* Etapas */
+  .ok-legal .ok-steps { margin: 24px 0; }
+  .ok-legal .ok-step { display: flex; gap: 16px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--ok-border); }
+  .ok-legal .ok-step:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .ok-legal .ok-step-icon { flex-shrink: 0; width: 36px; height: 36px; background: rgba(29, 185, 84, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+  .ok-legal .ok-step-content h3 { margin: 0 0 4px; font-size: 1rem; color: var(--ok-ink); }
+  .ok-legal .ok-step-content p { margin: 0; font-size: 0.95rem; color: var(--ok-ink-3); }
+  
+  /* Formulário */
+  .ok-legal .ok-form { background: var(--ok-surface-2); padding: 28px; border-radius: 12px; margin: 28px 0; }
+  .ok-legal .ok-form-title { font-size: 1.2rem; font-weight: 700; color: var(--ok-ink); margin: 0 0 20px; }
+  .ok-legal .ok-form-group { margin-bottom: 20px; }
+  .ok-legal .ok-form-group label { display: block; font-weight: 600; color: var(--ok-ink); margin-bottom: 8px; font-size: 0.95rem; }
+  .ok-legal .ok-form-group label .required { color: #ef4444; }
+  .ok-legal .ok-form-group input, .ok-legal .ok-form-group select, .ok-legal .ok-form-group textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--ok-border); border-radius: 10px; font-size: 1rem; font-family: inherit; background: #fff; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+  .ok-legal .ok-form-group input:focus, .ok-legal .ok-form-group select:focus, .ok-legal .ok-form-group textarea:focus { outline: none; border-color: var(--ok-primary); box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.15); }
+  .ok-legal .ok-form-group textarea { min-height: 100px; resize: vertical; }
+  .ok-legal .ok-form-group small { display: block; margin-top: 6px; font-size: 0.85rem; color: var(--ok-ink-3); }
+  .ok-legal .ok-form-checkbox { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  .ok-legal .ok-form-checkbox input[type="checkbox"] { width: auto; margin-top: 4px; accent-color: var(--ok-primary); transform: scale(1.2); }
+  .ok-legal .ok-form-checkbox label { margin: 0; font-weight: normal; font-size: 0.95rem; line-height: 1.5; color: var(--ok-ink-2); }
+  .ok-legal .ok-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 28px; background: linear-gradient(135deg, var(--ok-primary), var(--ok-primary-dark)); color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; width: 100%; }
+  .ok-legal .ok-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29, 185, 84, 0.3); }
+  .ok-legal .ok-btn:active { transform: translateY(0); }
+  
+  /* Contato */
+  .ok-legal .ok-contact { background: var(--ok-surface-2); padding: 24px; margin: 36px 0; border-radius: 12px; border: 1px solid var(--ok-border); }
+  .ok-legal .ok-contact h2 { margin: 0 0 16px; color: var(--ok-ink); }
+  .ok-legal .ok-contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .ok-legal .ok-contact-item { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+  .ok-legal .ok-social { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .ok-legal .ok-social a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: rgba(29, 185, 84, 0.1); border-radius: 8px; font-size: 0.9rem; color: var(--ok-ink-2); transition: all 0.2s ease; }
+  .ok-legal .ok-social a:hover { background: var(--ok-primary); color: #fff; text-decoration: none; }
+  
+  /* Footer */
+  .ok-legal-footer { background: #0f172a; color: #94a3b8; padding: 36px 20px; margin-top: 48px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); }
+  .ok-legal-footer .footer-content { max-width: var(--ok-max-width); margin: 0 auto; text-align: center; }
+  .ok-legal-footer .footer-brand { margin-bottom: 14px; }
+  .ok-legal-footer .footer-brand strong { color: #fff; display: block; font-size: 1.05rem; margin-bottom: 4px; }
+  .ok-legal-footer .footer-brand span { font-size: 0.85rem; color: #64748b; }
+  .ok-legal-footer .footer-contact { margin-bottom: 18px; }
+  .ok-legal-footer .footer-contact a { color: #94a3b8; margin: 0 14px; font-size: 0.9rem; text-decoration: none; transition: color 0.2s ease; }
+  .ok-legal-footer .footer-contact a:hover { color: var(--ok-primary); }
+  .ok-legal-footer .footer-links { margin-bottom: 18px; }
+  .ok-legal-footer .footer-links a { color: #64748b; font-size: 0.85rem; margin: 0 12px; text-decoration: none; transition: color 0.2s ease; }
+  .ok-legal-footer .footer-links a:hover { color: var(--ok-primary); }
+  .ok-legal-footer .footer-copy { color: #475569; font-size: 0.8rem; margin: 0; }
+  
+  @media (max-width: 640px) {
+    .ok-legal { padding: 24px 16px 48px; }
+    .ok-legal h1 { font-size: 1.5rem; }
+    .ok-legal .ok-benefits { grid-template-columns: 1fr; }
+    .ok-legal .ok-contact-grid { grid-template-columns: 1fr; }
+    .ok-legal .ok-social { flex-direction: column; }
+    .ok-legal .ok-form { padding: 20px; }
+    .ok-legal-footer { padding: 28px 16px; margin-left: -16px; margin-right: -16px; width: calc(100% + 32px); }
+    .ok-legal-footer .footer-contact a, .ok-legal-footer .footer-links a { display: block; margin: 8px 0; }
+  }
+</style>
+
+<div class="ok-legal">
+  <h1>Solicitação de Exclusão de Dados</h1>
+  <p class="ok-subtitle">Exercite seus direitos LGPD de forma simples e segura</p>
+
+  <h2>Sobre a Exclusão de Dados</h2>
+  <p>Conforme a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018), você tem o direito de solicitar a exclusão dos seus dados pessoais. Este formulário permite que você:</p>
+
+  <div class="ok-benefits">
+    <div class="ok-benefit">
+      <span class="ok-benefit-icon">✅</span>
+      <span class="ok-benefit-text">Solicite a remoção dos seus dados do nosso sistema</span>
+    </div>
+    <div class="ok-benefit">
+      <span class="ok-benefit-icon">✅</span>
+      <span class="ok-benefit-text">Escolha quais tipos de dados deseja excluir</span>
+    </div>
+    <div class="ok-benefit">
+      <span class="ok-benefit-icon">✅</span>
+      <span class="ok-benefit-text">Receba confirmação do processo via e-mail</span>
+    </div>
+    <div class="ok-benefit">
+      <span class="ok-benefit-icon">✅</span>
+      <span class="ok-benefit-text">Tenha seus direitos respeitados conforme a legislação</span>
+    </div>
+  </div>
+
+  <div class="ok-highlight warning">
+    <p><strong>Importante:</strong> Alguns dados podem ser mantidos por período legal obrigatório (dados fiscais: até 5 anos; registros de conexão: 1 ano conforme Marco Civil da Internet). Esses dados serão anonimizados quando possível.</p>
+  </div>
+
+  <form class="ok-form" action="https://formsubmit.co/[SEU_EMAIL_SUPORTE]" method="POST">
+    <h3 class="ok-form-title">Formulário de Solicitação</h3>
+    
+    <!-- Configurações FormSubmit -->
+    <input type="hidden" name="_subject" value="Solicitação de Exclusão de Dados - LGPD">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://[SEUDOMINIO.COM.BR]/exclusao-de-dados?sucesso=1">
+
+    <div class="ok-form-group">
+      <label for="nome_completo">Nome Completo <span class="required">*</span></label>
+      <input type="text" id="nome_completo" name="nome_completo" required placeholder="Seu nome completo">
+    </div>
+
+    <div class="ok-form-group">
+      <label for="email">E-mail <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required placeholder="seu@email.com">
+      <small>Usaremos este e-mail para confirmar sua solicitação</small>
+    </div>
+
+    <div class="ok-form-group">
+      <label for="telefone">Telefone/WhatsApp <span class="required">*</span></label>
+      <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+    </div>
+
+    <div class="ok-form-group">
+      <label for="documento">CPF ou CNPJ <span class="required">*</span></label>
+      <input type="text" id="documento" name="documento" required placeholder="000.000.000-00 ou 00.000.000/0001-00">
+      <small>Necessário para verificar sua identidade como titular dos dados</small>
+    </div>
+
+    <div class="ok-form-group">
+      <label for="codigo_cliente">Código de Cliente (se souber)</label>
+      <input type="text" id="codigo_cliente" name="codigo_cliente" placeholder="Ex: CLI-12345">
+      <small>Opcional - ajuda a localizar seu cadastro mais rapidamente</small>
+    </div>
+
+    <div class="ok-form-group">
+      <label for="tipo_solicitacao">Tipo de Solicitação <span class="required">*</span></label>
+      <select id="tipo_solicitacao" name="tipo_solicitacao" required>
+        <option value="">Selecione uma opção</option>
+        <option value="exclusao_completa">Exclusão Completa de Todos os Dados</option>
+        <option value="exclusao_parcial">Exclusão Parcial (especificar abaixo)</option>
+        <option value="cancelamento_servico">Cancelamento do Serviço + Exclusão de Dados</option>
+        <option value="cancelar_comunicacoes">Apenas Cancelar Comunicações de Marketing</option>
+        <option value="acesso_dados">Solicitar Cópia dos Meus Dados</option>
+        <option value="correcao_dados">Correção de Dados Incorretos</option>
+      </select>
+    </div>
+
+    <div class="ok-form-group">
+      <label for="dados_especificos">Dados Específicos (se aplicável)</label>
+      <textarea id="dados_especificos" name="dados_especificos" placeholder="Se escolheu exclusão parcial ou correção, descreva quais dados deseja excluir ou corrigir..."></textarea>
+    </div>
+
+    <div class="ok-form-group">
+      <label for="motivo">Motivo da Solicitação <span class="required">*</span></label>
+      <select id="motivo" name="motivo" required>
+        <option value="">Selecione o motivo</option>
+        <option value="nao_cliente">Não sou mais cliente</option>
+        <option value="nunca_cliente">Nunca fui cliente, mas recebi contato</option>
+        <option value="privacidade">Preocupação com privacidade</option>
+        <option value="dados_incorretos">Dados incorretos ou desatualizados</option>
+        <option value="muitas_mensagens">Recebo muitas mensagens</option>
+        <option value="direito_lgpd">Exercício do direito LGPD</option>
+        <option value="outro">Outro motivo</option>
+      </select>
+    </div>
+
+    <div class="ok-form-group">
+      <label for="detalhes">Detalhes Adicionais (opcional)</label>
+      <textarea id="detalhes" name="detalhes" placeholder="Informações complementares que você gostaria de adicionar..."></textarea>
+    </div>
+
+    <div class="ok-form-checkbox">
+      <input type="checkbox" id="confirma_titular" name="confirma_titular" required>
+      <label for="confirma_titular">Confirmo que sou o titular dos dados pessoais mencionados nesta solicitação e que as informações fornecidas são verdadeiras. <span class="required">*</span></label>
+    </div>
+
+    <div class="ok-form-checkbox">
+      <input type="checkbox" id="aceita_termos" name="aceita_termos" required>
+      <label for="aceita_termos">Li e concordo com os <a href="https://[SEUDOMINIO.COM.BR]/termos-de-servico" target="_blank">Termos de Serviço</a> e <a href="https://[SEUDOMINIO.COM.BR]/politica-privacidade" target="_blank">Política de Privacidade</a>, e entendo que alguns dados podem ser mantidos por período legal obrigatório. <span class="required">*</span></label>
+    </div>
+
+    <button type="submit" class="ok-btn">Enviar Solicitação</button>
+  </form>
+
+  <h2>Próximos Passos</h2>
+  <p>Após enviar sua solicitação:</p>
+
+  <div class="ok-steps">
+    <div class="ok-step">
+      <div class="ok-step-icon">📧</div>
+      <div class="ok-step-content">
+        <h3>Confirmação imediata</h3>
+        <p>Você receberá um e-mail confirmando o recebimento da solicitação</p>
+      </div>
+    </div>
+    <div class="ok-step">
+      <div class="ok-step-icon">🔍</div>
+      <div class="ok-step-content">
+        <h3>Análise (até 15 dias úteis)</h3>
+        <p>Nossa equipe analisará sua solicitação conforme a LGPD</p>
+      </div>
+    </div>
+    <div class="ok-step">
+      <div class="ok-step-icon">🪪</div>
+      <div class="ok-step-content">
+        <h3>Verificação de identidade</h3>
+        <p>Podemos solicitar documentos para confirmar sua identidade (se necessário)</p>
+      </div>
+    </div>
+    <div class="ok-step">
+      <div class="ok-step-icon">⚙️</div>
+      <div class="ok-step-content">
+        <h3>Execução</h3>
+        <p>Processaremos a exclusão ou atendimento conforme solicitado</p>
+      </div>
+    </div>
+    <div class="ok-step">
+      <div class="ok-step-icon">✅</div>
+      <div class="ok-step-content">
+        <h3>Confirmação final</h3>
+        <p>Você receberá confirmação por e-mail da conclusão do processo</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ok-contact">
+    <h2>Dúvidas?</h2>
+    <p>Entre em contato com nossa equipe:</p>
+    <div class="ok-contact-grid">
+      <div class="ok-contact-item"><span>📍</span> [SUA_CIDADE_UF] - Brasil</div>
+      <div class="ok-contact-item"><span>📞</span> <a href="[SEU_WHATSAPP_LINK]">[SEU_TELEFONE]</a></div>
+      <div class="ok-contact-item"><span>📧</span> <a href="mailto:[SEU_EMAIL_SUPORTE]">[SEU_EMAIL_SUPORTE]</a></div>
+      <div class="ok-contact-item"><span>🏢</span> CNPJ: [SEU_CNPJ]</div>
+    </div>
+    <div class="ok-social">
+      <a href="[SEU_INSTAGRAM]" target="_blank">Instagram</a>
+      <a href="[SEU_LINKEDIN]" target="_blank">LinkedIn</a>
+      <a href="[SEU_YOUTUBE]" target="_blank">YouTube</a>
+    </div>
+  </div>
+
+  <footer class="ok-legal-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <strong>[NOME_DA_EMPRESA]</strong>
+        <span>CNPJ: [SEU_CNPJ] • [SUA_CIDADE_UF] - Brasil</span>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:[SEU_EMAIL_SUPORTE]">[SEU_EMAIL_SUPORTE]</a>
+        <a href="[SEU_WHATSAPP_LINK]">[SEU_TELEFONE]</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://[SEUDOMINIO.COM.BR]/politica-privacidade">Privacidade</a>
+        <a href="https://[SEUDOMINIO.COM.BR]/termos-de-servico">Termos</a>
+        <a href="https://[SEUDOMINIO.COM.BR]/exclusao-de-dados">LGPD</a>
+      </div>
+      <p class="footer-copy">© 2026 [NOME_DA_EMPRESA]. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</div>
+

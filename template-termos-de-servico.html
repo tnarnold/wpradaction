@@ -1,0 +1,261 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  TEMPLATE: Termos de Serviço para Provedores de Internet                     ║
+║  ISP AI Starter - OK Inteligência Artificial                                 ║
+║  Versão: 1.0 | Janeiro 2026                                                  ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  COMO USAR:                                                                  ║
+║  1) Substitua TODOS os placeholders abaixo pelos dados da sua empresa        ║
+║  2) Use Ctrl+H (Localizar e Substituir) para facilitar                       ║
+║  3) No WordPress, crie uma página chamada "Termos de Serviço"                ║
+║  4) Adicione um bloco "HTML Personalizado" (Custom HTML)                     ║
+║  5) Cole TODO este código                                                    ║
+║  6) Configure URL como /termos-de-servico                                    ║
+║  7) Publique a página                                                        ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  PLACEHOLDERS PARA SUBSTITUIR:                                               ║
+║  [NOME_DA_EMPRESA]     → Razão social ou nome fantasia                       ║
+║  [SEUDOMINIO.COM.BR]   → Domínio principal do site                           ║
+║  [SEU_EMAIL_SUPORTE]   → E-mail de contato/suporte                           ║
+║  [SEU_TELEFONE]        → Telefone com DDD (ex: (31) 98765-4321)              ║
+║  [SEU_WHATSAPP_LINK]   → Link wa.me (ex: https://wa.me/5531987654321)        ║
+║  [SUA_CIDADE_UF]       → Cidade e estado (ex: Belo Horizonte, MG)            ║
+║  [SEU_CNPJ]            → CNPJ formatado (ex: 12.345.678/0001-90)             ║
+║  [DATA_ATUALIZACAO]    → Data da última revisão (ex: 2 de janeiro de 2026)  ║
+║  [SEU_INSTAGRAM]       → URL do Instagram                                    ║
+║  [SEU_LINKEDIN]        → URL do LinkedIn                                     ║
+║  [SEU_YOUTUBE]         → URL do YouTube                                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+  .ok-legal {
+    --ok-primary: #1db954;
+    --ok-primary-dark: #0e9d3d;
+    --ok-ink: #1a1a2e;
+    --ok-ink-2: #333;
+    --ok-ink-3: #666;
+    --ok-surface: #ffffff;
+    --ok-surface-2: #f8f9fa;
+    --ok-border: #eee;
+    --ok-warning: #f59e0b;
+    --ok-max-width: 720px;
+    --ok-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  .ok-legal { font-family: var(--ok-font); background: var(--ok-surface); color: var(--ok-ink-2); line-height: 1.8; font-size: 16px; padding: 40px 20px 60px; max-width: var(--ok-max-width); margin: 0 auto; -webkit-font-smoothing: antialiased; }
+  .ok-legal * { box-sizing: border-box; }
+  .ok-legal h1 { font-size: 1.85rem; font-weight: 700; color: var(--ok-primary); margin: 0 0 8px; letter-spacing: -0.02em; line-height: 1.2; }
+  .ok-legal .ok-meta { color: var(--ok-ink-3); font-size: 0.9rem; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--ok-border); }
+  .ok-legal h2 { font-size: 1.15rem; font-weight: 700; color: var(--ok-ink); margin: 36px 0 14px; letter-spacing: -0.01em; }
+  .ok-legal p { margin: 0 0 16px; color: var(--ok-ink-2); }
+  .ok-legal strong { color: var(--ok-ink); font-weight: 600; }
+  .ok-legal a { color: var(--ok-primary); text-decoration: none; transition: color 0.2s ease; }
+  .ok-legal a:hover { color: var(--ok-primary-dark); text-decoration: underline; }
+  .ok-legal ul { margin: 0 0 16px 24px; color: var(--ok-ink-2); padding: 0; }
+  .ok-legal li { margin-bottom: 8px; line-height: 1.7; }
+  .ok-legal li::marker { color: var(--ok-primary); }
+  .ok-legal .ok-highlight { background: var(--ok-surface-2); padding: 16px 18px; margin: 20px 0; border-left: 3px solid var(--ok-primary); border-radius: 0 8px 8px 0; }
+  .ok-legal .ok-highlight p { margin: 0; }
+  .ok-legal .ok-highlight.warning { background: #fffbeb; border-left-color: var(--ok-warning); }
+  .ok-legal .ok-contact { background: var(--ok-surface-2); padding: 24px; margin: 36px 0; border-radius: 12px; border: 1px solid var(--ok-border); }
+  .ok-legal .ok-contact h2 { margin: 0 0 16px; color: var(--ok-ink); }
+  .ok-legal .ok-contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .ok-legal .ok-contact-item { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+  .ok-legal .ok-social { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .ok-legal .ok-social a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: rgba(29, 185, 84, 0.1); border-radius: 8px; font-size: 0.9rem; color: var(--ok-ink-2); transition: all 0.2s ease; }
+  .ok-legal .ok-social a:hover { background: var(--ok-primary); color: #fff; text-decoration: none; }
+  .ok-legal-footer { background: #0f172a; color: #94a3b8; padding: 36px 20px; margin-top: 48px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); }
+  .ok-legal-footer .footer-content { max-width: var(--ok-max-width); margin: 0 auto; text-align: center; }
+  .ok-legal-footer .footer-brand { margin-bottom: 14px; }
+  .ok-legal-footer .footer-brand strong { color: #fff; display: block; font-size: 1.05rem; margin-bottom: 4px; }
+  .ok-legal-footer .footer-brand span { font-size: 0.85rem; color: #64748b; }
+  .ok-legal-footer .footer-contact { margin-bottom: 18px; }
+  .ok-legal-footer .footer-contact a { color: #94a3b8; margin: 0 14px; font-size: 0.9rem; text-decoration: none; transition: color 0.2s ease; }
+  .ok-legal-footer .footer-contact a:hover { color: var(--ok-primary); }
+  .ok-legal-footer .footer-links { margin-bottom: 18px; }
+  .ok-legal-footer .footer-links a { color: #64748b; font-size: 0.85rem; margin: 0 12px; text-decoration: none; transition: color 0.2s ease; }
+  .ok-legal-footer .footer-links a:hover { color: var(--ok-primary); }
+  .ok-legal-footer .footer-copy { color: #475569; font-size: 0.8rem; margin: 0; }
+  @media (max-width: 640px) {
+    .ok-legal { padding: 24px 16px 48px; }
+    .ok-legal h1 { font-size: 1.5rem; }
+    .ok-legal .ok-contact-grid { grid-template-columns: 1fr; }
+    .ok-legal .ok-social { flex-direction: column; }
+    .ok-legal-footer { padding: 28px 16px; margin-left: -16px; margin-right: -16px; width: calc(100% + 32px); }
+    .ok-legal-footer .footer-contact a, .ok-legal-footer .footer-links a { display: block; margin: 8px 0; }
+  }
+</style>
+
+<div class="ok-legal">
+  <h1>Termos de Serviço</h1>
+  <p class="ok-meta">Última atualização: [DATA_ATUALIZACAO]</p>
+
+  <h2>1. Introdução e Aceitação</h2>
+  <p>Este documento estabelece os termos e condições para a contratação e uso dos serviços de internet fornecidos pela <strong>[NOME_DA_EMPRESA]</strong> ("Provedor", "nós" ou "Empresa"). Ao contratar ou utilizar nossos serviços, você ("Cliente" ou "Assinante") concorda e se vincula a todos os termos deste Contrato.</p>
+  <p>O uso de nossos serviços também é regido por nossa <a href="https://[SEUDOMINIO.COM.BR]/politica-privacidade">Política de Privacidade</a>, que está incorporada a este Contrato por referência.</p>
+
+  <h2>2. Definição do Serviço</h2>
+  <p>A <strong>[NOME_DA_EMPRESA]</strong> oferece serviços de acesso à internet banda larga via fibra óptica, que incluem:</p>
+  <ul>
+    <li><strong>Acesso à Internet:</strong> Conexão à internet conforme velocidade e características do plano contratado</li>
+    <li><strong>Equipamentos:</strong> Fornecimento de equipamentos em comodato (ONU, roteador Wi-Fi) conforme plano</li>
+    <li><strong>Suporte Técnico:</strong> Atendimento para resolução de problemas via WhatsApp, telefone e presencial</li>
+    <li><strong>Central do Assinante:</strong> Portal online para gestão de faturas, pagamentos e solicitações</li>
+    <li><strong>Instalação:</strong> Serviço de instalação dos equipamentos no endereço do cliente</li>
+  </ul>
+
+  <h2>3. Obrigações do Cliente</h2>
+  <p>O Cliente concorda em:</p>
+  <ul>
+    <li>Fornecer informações verdadeiras e completas no cadastro</li>
+    <li>Manter seus dados cadastrais atualizados</li>
+    <li>Efetuar o pagamento das mensalidades nas datas de vencimento</li>
+    <li>Utilizar o serviço de acordo com a lei e bons costumes</li>
+    <li>Não utilizar o serviço para atividades ilegais, spam ou práticas que prejudiquem terceiros</li>
+    <li>Zelar pelos equipamentos cedidos em comodato</li>
+    <li>Permitir acesso de técnicos para instalação e manutenção quando necessário</li>
+    <li>Não revender ou redistribuir a conexão sem autorização</li>
+  </ul>
+
+  <h2>4. Obrigações do Provedor</h2>
+  <p>A <strong>[NOME_DA_EMPRESA]</strong> se compromete a:</p>
+  <ul>
+    <li>Fornecer o serviço de internet conforme plano contratado</li>
+    <li>Manter a infraestrutura de rede em funcionamento adequado</li>
+    <li>Oferecer suporte técnico para resolução de problemas</li>
+    <li>Comunicar manutenções programadas com antecedência quando possível</li>
+    <li>Resolver problemas técnicos em prazo razoável</li>
+    <li>Respeitar a privacidade dos dados do Cliente conforme nossa Política de Privacidade</li>
+    <li>Cumprir as regulamentações da Anatel e demais órgãos competentes</li>
+  </ul>
+
+  <h2>5. Velocidade e Qualidade</h2>
+  <p>Sobre a velocidade contratada:</p>
+  <ul>
+    <li><strong>Velocidade máxima:</strong> A velocidade contratada é o máximo que a conexão pode atingir</li>
+    <li><strong>Velocidade média:</strong> Garantimos no mínimo 80% da velocidade contratada, conforme regulamentação da Anatel</li>
+    <li><strong>Fatores externos:</strong> A velocidade pode variar devido a congestionamento da internet, capacidade dos servidores acessados e qualidade da rede Wi-Fi do cliente</li>
+    <li><strong>Diagnóstico:</strong> Oferecemos ferramentas de diagnóstico para verificar a qualidade da sua conexão</li>
+  </ul>
+
+  <h2>6. Pagamento e Faturamento</h2>
+  <ul>
+    <li><strong>Vencimento:</strong> Conforme data escolhida na contratação</li>
+    <li><strong>Formas de pagamento:</strong> Boleto bancário, Pix, cartão de crédito ou débito automático</li>
+    <li><strong>Atraso:</strong> Sujeito a multa de 2% + juros de 1% ao mês</li>
+    <li><strong>Suspensão:</strong> Após 15 dias de atraso, o serviço pode ser suspenso temporariamente</li>
+    <li><strong>Cancelamento:</strong> Após 30 dias de atraso, o contrato pode ser cancelado</li>
+    <li><strong>Segunda via:</strong> Disponível na Central do Assinante ou via WhatsApp</li>
+  </ul>
+
+  <div class="ok-highlight warning">
+    <p><strong>Importante:</strong> Em caso de dificuldades financeiras, entre em contato conosco antes do vencimento. Podemos negociar alternativas de pagamento.</p>
+  </div>
+
+  <h2>7. Equipamentos em Comodato</h2>
+  <p>Os equipamentos fornecidos (ONU, roteador) são cedidos em comodato:</p>
+  <ul>
+    <li>Permanecem propriedade da <strong>[NOME_DA_EMPRESA]</strong></li>
+    <li>O Cliente é responsável pela guarda e conservação</li>
+    <li>Danos por mau uso ou negligência serão cobrados do Cliente</li>
+    <li>Devem ser devolvidos em caso de cancelamento do serviço</li>
+    <li>Não devem ser alterados, abertos ou modificados pelo Cliente</li>
+  </ul>
+
+  <h2>8. Suporte Técnico</h2>
+  <ul>
+    <li><strong>WhatsApp:</strong> <a href="[SEU_WHATSAPP_LINK]">[SEU_TELEFONE]</a> (atendimento 24h)</li>
+    <li><strong>Telefone:</strong> [SEU_TELEFONE]</li>
+    <li><strong>E-mail:</strong> <a href="mailto:[SEU_EMAIL_SUPORTE]">[SEU_EMAIL_SUPORTE]</a></li>
+    <li><strong>Visita técnica:</strong> Agendamento conforme disponibilidade</li>
+  </ul>
+
+  <div class="ok-highlight">
+    <p><strong>Visitas técnicas:</strong> Visitas para problemas causados por equipamentos ou instalação do Cliente (ex: configuração de roteador próprio, cabeamento interno) podem ser cobradas.</p>
+  </div>
+
+  <h2>9. Cancelamento</h2>
+  <p><strong>9.1. Pelo Cliente:</strong></p>
+  <ul>
+    <li>Solicite pelo WhatsApp, telefone ou presencialmente</li>
+    <li>Período de aviso: recomendamos solicitar com 5 dias de antecedência</li>
+    <li>Equipamentos devem ser devolvidos em até 7 dias</li>
+    <li>Valores proporcionais serão cobrados ou restituídos</li>
+  </ul>
+
+  <p><strong>9.2. Pelo Provedor:</strong></p>
+  <ul>
+    <li>Por inadimplência superior a 30 dias</li>
+    <li>Por uso indevido do serviço (atividades ilegais, spam, etc.)</li>
+    <li>Por informações cadastrais falsas</li>
+    <li>Por danos intencionais aos equipamentos ou infraestrutura</li>
+  </ul>
+
+  <h2>10. Proteção de Dados (LGPD)</h2>
+  <p>Tratamos seus dados em conformidade com a Lei Geral de Proteção de Dados:</p>
+  <ul>
+    <li>Coletamos apenas dados necessários para prestação do serviço</li>
+    <li>Seus dados são protegidos com medidas de segurança adequadas</li>
+    <li>Você pode exercer seus direitos de titular conforme a LGPD</li>
+    <li>Consulte nossa <a href="https://[SEUDOMINIO.COM.BR]/politica-privacidade">Política de Privacidade</a> para mais detalhes</li>
+    <li>Solicite exclusão através do nosso <a href="https://[SEUDOMINIO.COM.BR]/exclusao-de-dados">formulário</a></li>
+  </ul>
+
+  <h2>11. Limitação de Responsabilidade</h2>
+  <p>A <strong>[NOME_DA_EMPRESA]</strong> não se responsabiliza por:</p>
+  <ul>
+    <li>Interrupções causadas por fatores externos (quedas de energia, rompimento de fibra por terceiros, desastres naturais)</li>
+    <li>Lentidão causada por servidores de terceiros ou congestionamento da internet</li>
+    <li>Problemas na rede interna ou equipamentos do Cliente</li>
+    <li>Uso indevido do serviço pelo Cliente</li>
+    <li>Conteúdo acessado ou transmitido pelo Cliente</li>
+    <li>Danos indiretos ou lucros cessantes</li>
+  </ul>
+
+  <h2>12. Alterações nos Termos</h2>
+  <p>A <strong>[NOME_DA_EMPRESA]</strong> pode modificar estes Termos de Serviço. Alterações significativas serão comunicadas com antecedência mínima de 30 dias por e-mail, WhatsApp ou fatura. O uso contínuo do serviço após as mudanças será considerado como aceitação dos novos termos.</p>
+
+  <h2>13. Disposições Gerais</h2>
+  <ul>
+    <li><strong>Foro:</strong> Fica eleito o foro da Comarca de [SUA_CIDADE_UF] para dirimir quaisquer controvérsias</li>
+    <li><strong>Legislação:</strong> Este contrato é regido pelas leis brasileiras e regulamentações da Anatel</li>
+    <li><strong>Integralidade:</strong> Este documento, junto com a Política de Privacidade, constitui o acordo integral entre as partes</li>
+    <li><strong>Comunicações:</strong> Serão consideradas válidas as comunicações por e-mail, WhatsApp ou carta</li>
+  </ul>
+
+  <div class="ok-contact">
+    <h2>Informações de Contato</h2>
+    <p><strong>[NOME_DA_EMPRESA]</strong></p>
+    <div class="ok-contact-grid">
+      <div class="ok-contact-item"><span>📍</span> [SUA_CIDADE_UF] - Brasil</div>
+      <div class="ok-contact-item"><span>📞</span> <a href="[SEU_WHATSAPP_LINK]">[SEU_TELEFONE]</a></div>
+      <div class="ok-contact-item"><span>📧</span> <a href="mailto:[SEU_EMAIL_SUPORTE]">[SEU_EMAIL_SUPORTE]</a></div>
+      <div class="ok-contact-item"><span>🏢</span> CNPJ: [SEU_CNPJ]</div>
+    </div>
+    <div class="ok-social">
+      <a href="[SEU_INSTAGRAM]" target="_blank">Instagram</a>
+      <a href="[SEU_LINKEDIN]" target="_blank">LinkedIn</a>
+      <a href="[SEU_YOUTUBE]" target="_blank">YouTube</a>
+    </div>
+  </div>
+
+  <footer class="ok-legal-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <strong>[NOME_DA_EMPRESA]</strong>
+        <span>CNPJ: [SEU_CNPJ] • [SUA_CIDADE_UF] - Brasil</span>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:[SEU_EMAIL_SUPORTE]">[SEU_EMAIL_SUPORTE]</a>
+        <a href="[SEU_WHATSAPP_LINK]">[SEU_TELEFONE]</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://[SEUDOMINIO.COM.BR]/politica-privacidade">Privacidade</a>
+        <a href="https://[SEUDOMINIO.COM.BR]/termos-de-servico">Termos</a>
+        <a href="https://[SEUDOMINIO.COM.BR]/exclusao-de-dados">LGPD</a>
+      </div>
+      <p class="footer-copy">© 2026 [NOME_DA_EMPRESA]. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</div>
+
